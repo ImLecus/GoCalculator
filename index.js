@@ -4,7 +4,7 @@ var compiledResult = "";
 const Refresh = () => {
   document.getElementById("result").innerHTML = result; 
   if(result == ""){
-    document.getElementById("result").innerHTML = "0";
+    document.getElementById("result").innerHTML = "0"; 
   }
 }
 Array.from(document.querySelectorAll(".btn")).forEach(button => {
