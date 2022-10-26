@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(255, 255, 254);
+}
 .row{
     display: flex;
 }
@@ -24,9 +27,24 @@
 #result{
     text-align: right;
     width: 100%;
+    padding: 15px 15px 0 0;
+    background-color: transparent;
+    filter: none;
+    color: rgb(90, 90, 90);
+    font-size: 50px;
+    margin: 0;
+}
+#operation {
+    text-align: right;
+    width: 100%;
     padding: 15px;
     background-color: transparent;
     filter: none;
-    color: darkslategray;
-    font-size: 50px;
+    color: rgb(148, 148, 148);
+    font-size: 25px;
+    margin: 0;
+    padding: 0 15px 0 0;
+}
+.row{
+    height: fit-content;
 }
