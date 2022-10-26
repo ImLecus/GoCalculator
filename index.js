@@ -8,6 +8,7 @@ const Refresh = () => {
   if(result == ""){
     document.getElementById("result").innerHTML = "0"; 
   }
+  setTimeout(()=>{document.getElementById("operation").classList.remove("op")},3000)
 }
 Array.from(document.querySelectorAll(".btn")).forEach(button => {
   previousResult = result;
@@ -25,10 +26,14 @@ document.querySelector(".ac").addEventListener("click", () => {
   result = "";
   Refresh();
 });
-document.querySelector(".enter").addEventListener("click", () => {
-  previousResult = result;
+const compileResult = () =>  {
   compiledResult = result.replace("÷","/");
   compiledResult = compiledResult.replace("×","*");
-  result = eval(compiledResult).toString();
+}
+document.querySelector(".enter").addEventListener("click", () => {
+  document.getElementById("operation").classList.add("op");
+  previousResult = result;
+  compileResult();
+  result = parseFloat(eval(compiledResult).toFixed(3)).toString();
   Refresh();
 });

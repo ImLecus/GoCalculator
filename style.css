@@ -23,14 +23,20 @@ body{
     font-size: 23px;
     font-family: 'Montserrat',sans-serif;
     font-weight: 500;
+    transition: linear 0.2s;
+}
+.row .btn:hover,.row .ac:hover,.row .del:hover,.row .enter:hover{
+    transform: translateY(-5px);
+}
+.row .btn:active,.row .ac:active,.row .del:active,.row .enter:active{
+    background-color: #5a5a5a;
 }
 #result{
     text-align: right;
     width: 100%;
     padding: 15px 15px 0 0;
     background-color: transparent;
-    filter: none;
-    color: rgb(90, 90, 90);
+    color: #5a5a5a;
     font-size: 50px;
     margin: 0;
 }
@@ -39,11 +45,25 @@ body{
     width: 100%;
     padding: 15px;
     background-color: transparent;
-    filter: none;
-    color: rgb(148, 148, 148);
+    color: #949494;
     font-size: 25px;
     margin: 0;
     padding: 0 15px 0 0;
+}
+.op{
+    animation: op 0.5s;
+}
+@keyframes op {
+    from{
+        transform: translateY(-60px);
+        font-size: 50px;
+        color: #5a5a5a;
+    }
+    to{
+        transform: translateY(0);
+        font-size: 25px;
+        color: #949494;
+    }
 }
 .row{
     height: fit-content;
