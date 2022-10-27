@@ -17,10 +17,6 @@ Array.from(document.querySelectorAll(".btn")).forEach(button => {
     Refresh();
   })
 });
-document.querySelector(".del").addEventListener("click", () => {
-  result = result.substring(0,result.length - 1);
-  Refresh();
-});
 document.querySelector(".ac").addEventListener("click", () => {
   previousResult = "";
   result = "";
@@ -29,11 +25,12 @@ document.querySelector(".ac").addEventListener("click", () => {
 const compileResult = () =>  {
   compiledResult = result.replace("÷","/");
   compiledResult = compiledResult.replace("×","*");
+  compiledResult = compiledResult.replace("--","+");
 }
 document.querySelector(".enter").addEventListener("click", () => {
   document.getElementById("operation").classList.add("op");
   previousResult = result;
   compileResult();
-  result = parseFloat(eval(compiledResult).toFixed(3)).toString();
+  result = parseFloat(eval(compiledResult).toFixed(5)).toString();
   Refresh();
 });

@@ -8,44 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div style="height: 120px; background-color:lightgrey;border-radius: 10px;margin-bottom: 20px;">
-            <div class="row" >
-                <h1 id="result">Result</h1>
-            </div>
-            <div class="row">
-                <h3 id="operation">Result</h3>
-            </div>
+    <div class="calculator">
+        <div class="screen">
+            <h1 id="result">Result</h1>
+            <h3 id="operation">Operation</h3>
         </div>
-        
-        <div class="row">
-           <button class="btn">7</button>
+        <div class="container">
+            <button class="btn">7</button>
             <button class="btn">8</button>
             <button class="btn">9</button>
             <button class="btn">×</button>
             <button class="btn" value="/">÷</button> 
-        </div>
-        <div class="row">
+
             <button class="btn">4</button>
             <button class="btn">5</button>
             <button class="btn">6</button>
             <button class="btn">+</button>
             <button class="btn">-</button>
-        </div>
-        <div class="row">
+
             <button class="btn">1</button>
             <button class="btn">2</button>
             <button class="btn">3</button>
-            <button class="del">DEL</button>
-            <button class="ac">AC</button>  
-        </div>
-        <div class="row">
+            <button class="btn">(</button>
+            <button class="btn">)</button>
+
             <button class="btn">0</button>
             <button class="btn">.</button>
-            <button class="">V</button>
-            <button class="enter" style="flex-grow: 2; margin: 5px 10px; background-color: darkorange;">=</button>
+            <button class="ac">C</button>  
+            <button class="enter" style="flex-grow: 2;">=</button>
         </div>
     </div>
+    
     <script src="index.js"></script>
 </body>
 </html>
